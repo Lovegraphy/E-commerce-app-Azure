@@ -23,7 +23,7 @@ This repository contains the configuration and setup for deploying a scalable e-
 
 Use the provided script to create and configure the Azure VMs:
 <p align="center">
-  <img src="screenshots/frontend-vm.png" alt="Screenshot of Frontend VM" width="500"/>
+  <img src="Screenshots/frontend-vm.png" alt="Screenshot of Frontend VM" width="500"/>
 </p>
 
 
