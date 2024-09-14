@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Variables
+RESOURCE_GROUP="myResourceGroup"
+VM_NAME_FRONTEND="frontendVM"
+VM_NAME_BACKEND="backendVM"
+LOCATION="EastUS"
+IMAGE="UbuntuLTS"
+SIZE="Standard_B1s"
+ADMIN_USER="azureappdeploy"
+ADMIN_PASSWORD="tesing@987" #
+# Create Resource Group
+az group create --name $RESOURCE_GROUP --location $LOCATION
+
+# Create Front-End VM
+az vm create \
+  --resource-group $RESOURCE_GROUP \
+  --name $VM_NAME_FRONTEND \
+  --image $IMAGE \
+  --size $SIZE \
+  --admin-username $ADMIN_USER \
+  --admin-password $ADMIN_PASSWORD \
+  --generate-ssh-keys
+
+# Create Back-End VM
+az vm create \
+  --resource-group $RESOURCE_GROUP \
+  --name $VM_NAME_BACKEND \
+  --image $IMAGE \
+  --size $SIZE \
+  --admin-username $ADMIN_USER \
+  --admin-password $ADMIN_PASSWORD \
+  --generate-ssh-keys
+
+# Open Ports for HTTP/HTTPS
+az vm open-port --resource-group $RESOURCE_GROUP --name $VM_NAME_FRONTEND --port 80
+az vm open-port --resource-group $RESOURCE_GROUP --name $VM_NAME_FRONTEND --port 443
+az vm open-port --resource-group $RESOURCE_GROUP --name $VM_NAME_BACKEND --port 80
+az vm open-port --resource-group $RESOURCE_GROUP --name $VM_NAME_BACKEND --port 3306 # MySQL Port
+
+# Output VM details
+az vm show --resource-group $RESOURCE_GROUP --name $VM_NAME_FRONTEND --show-details --query [publicIps] --output tsv
+az vm show --resource-group $RESOURCE_GROUP --name $VM_NAME_BACKEND --show-details --query [publicIps] --output tsv

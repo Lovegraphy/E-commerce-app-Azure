@@ -1,0 +1,60 @@
+#!/bin/bash
+
+# Update packages and install dependencies
+sudo apt-get update
+sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
+
+# Install Docker
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+# Add user to the Docker group
+sudo usermod -aG docker $USER
+
+# Install Docker Compose
+sudo curl -L "https://github.com/docker/compose/releases/download/$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep tag_name | cut -d '"' -f 4)/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+# Create Docker Compose directory and file
+mkdir -p ~/docker-compose
+cd ~/docker-compose
+
+# Create docker-compose.yml for MySQL and Backend API
+cat <<EOF > docker-compose.yml
+version: '3'
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: ecommerce_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: ecommerce_db
+      MYSQL_USER: ecommerce_user
+      MYSQL_PASSWORD: user_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  backend:
+    image: your-backend-image:latest
+    container_name: ecommerce_backend
+    ports:
+      - "80:80"
+    depends_on:
+      - mysql
+    environment:
+      DB_HOST: mysql
+      DB_USER: ecommerce_user
+      DB_PASSWORD: user_password
+      DB_NAME: ecommerce_db
+
+volumes:
+  mysql_data:
+EOF
+
+# Start Docker containers
+sudo docker-compose up -d
+
+# Check Docker status
+sudo docker ps
