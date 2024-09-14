@@ -24,8 +24,8 @@ This repository contains the configuration and setup for deploying a scalable e-
 Use the provided script to create and configure the Azure VMs:
 
 ```bash
+![vm-ss](Screenshots/frontend-vm.png)
 
-<img src="Screenshots/frontend-vm.png" alt="Screenshot of Frontend VM" width="500"/>
 # Variables
 RESOURCE_GROUP="myResourceGroup"
 VM_NAME_FRONTEND="frontendVM"
