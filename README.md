@@ -196,35 +196,41 @@ sudo chmod +x /usr/local/bin/db_health_check.sh
    curl -X GET http://<frontend_vm_ip>/api/products
    ```
 
-   ##Screenshots
+   ## Screenshots
 
-         1.App Insights
+         1. App Insights
    <p align="center">
   <img src="Screenshots/app-insights.png" alt="Screenshot" width="800"/>
 </p>
+
           2.Load-balancer
 <p align="center">
   <img src="Screenshots/load-balancer.png" alt="Screenshot" width="800"/>
 </p>
-          3.Docker Container Log
+
+          3. Docker Container Log
 <p align="center">
   <img src="Screenshots/Container-log.png" alt="Screenshot" width="800"/>
 </p>
-          4.Frontend Network Settings
+
+          4. Frontend Network Settings
 <p align="center">
   <img src="Screenshots/frontend-nsg.png" alt="Screenshot" width="800"/>
 </p>
+
           5. Backend Network Settings
 <p align="center">
-  <img src="Screenshots/backend-nsg.png" alt="Screenshot of Frontend VM" width="500"/>
+  <img src="Screenshots/backend-nsg.png" alt="Screenshot of Frontend VM" width="800"/>
 </p>
-          6.frontend VM 
+
+          6. Frontend VM 
 <p align="center">
-  <img src="Screenshots/frontend-vm.png" alt="Screenshot of Frontend VM" width="500"/>
+  <img src="Screenshots/frontend-vm.png" alt="Screenshot of Frontend VM" width="800"/>
 </p>
+
           7.Backend VM
 <p align="center">
-  <img src="Screenshots/backend-vm.png" alt="Screenshot of Frontend VM" width="500"/>
+  <img src="Screenshots/backend-vm.png" alt="Screenshot of Frontend VM" width="800"/>
 </p>
 
 
