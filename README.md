@@ -22,7 +22,10 @@ This repository contains the configuration and setup for deploying a scalable e-
 ### 1. Create Azure Virtual Machines
 
 Use the provided script to create and configure the Azure VMs:
-<img src="Screenshots/frontend-vm.png" alt="Screenshot of Frontend VM" width="500"/>
+<p align="center">
+  <img src="screenshots/frontend-vm.png" alt="Screenshot of Frontend VM" width="500"/>
+</p>
+
 
 ```bash
 
