@@ -198,31 +198,31 @@ sudo chmod +x /usr/local/bin/db_health_check.sh
 
    ##Screenshots
 
-!.App Insights
+         1.App Insights
    <p align="center">
   <img src="Screenshots/app-insights.png" alt="Screenshot" width="800"/>
 </p>
-2.load-balancer
+          2.Load-balancer
 <p align="center">
   <img src="Screenshots/load-balancer.png" alt="Screenshot" width="800"/>
 </p>
-3.docker container log
+          3.Docker Container Log
 <p align="center">
-  <img src="Screenshots/container-log.png" alt="Screenshot" width="800"/>
+  <img src="Screenshots/Container-log.png" alt="Screenshot" width="800"/>
 </p>
-4.frontend nsg
+          4.Frontend Network Settings
 <p align="center">
   <img src="Screenshots/frontend-nsg.png" alt="Screenshot" width="800"/>
 </p>
-5. backend nsg
+          5. Backend Network Settings
 <p align="center">
   <img src="Screenshots/backend-nsg.png" alt="Screenshot of Frontend VM" width="500"/>
 </p>
-6.frontend vm 
+          6.frontend VM 
 <p align="center">
   <img src="Screenshots/frontend-vm.png" alt="Screenshot of Frontend VM" width="500"/>
 </p>
-7.
+          7.Backend VM
 <p align="center">
   <img src="Screenshots/backend-vm.png" alt="Screenshot of Frontend VM" width="500"/>
 </p>
