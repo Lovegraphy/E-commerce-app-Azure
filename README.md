@@ -196,6 +196,39 @@ sudo chmod +x /usr/local/bin/db_health_check.sh
    curl -X GET http://<frontend_vm_ip>/api/products
    ```
 
+   ##Screenshots
+
+!.App Insights
+   <p align="center">
+  <img src="Screenshots/app-insights.png" alt="Screenshot" width="800"/>
+</p>
+2.load-balancer
+<p align="center">
+  <img src="Screenshots/load-balancer.png" alt="Screenshot" width="800"/>
+</p>
+3.docker container log
+<p align="center">
+  <img src="Screenshots/container-log.png" alt="Screenshot" width="800"/>
+</p>
+4.frontend nsg
+<p align="center">
+  <img src="Screenshots/frontend-nsg.png" alt="Screenshot" width="800"/>
+</p>
+5. backend nsg
+<p align="center">
+  <img src="Screenshots/backend-nsg.png" alt="Screenshot of Frontend VM" width="500"/>
+</p>
+6.frontend vm 
+<p align="center">
+  <img src="Screenshots/frontend-vm.png" alt="Screenshot of Frontend VM" width="500"/>
+</p>
+7.
+<p align="center">
+  <img src="Screenshots/backend-vm.png" alt="Screenshot of Frontend VM" width="500"/>
+</p>
+
+
+
 ## Troubleshooting
 
 - **API Not Accessible**:
